@@ -1,7 +1,7 @@
 # Configure Azure Provider
 provider "azurerm" {
   features {}
-  subscription_id = "13a4df32-8add-46d8-85e8-6efbb2d7395e"
+  subscription_id = "your_subscription_id"
 }
 
 # Create Resource Group
