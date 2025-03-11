@@ -129,6 +129,7 @@ cd your-repo-name
 
 #Deploy to azure portal
 terraform init
+terraform validate
 terraform plan
 terraform apply
 ```
