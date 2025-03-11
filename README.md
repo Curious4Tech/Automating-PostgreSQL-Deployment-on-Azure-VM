@@ -122,10 +122,10 @@ Deploying the infrastructure is straightforward:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Curious4Tech/your-repo-name.git
+git clone https://github.com/Curious4Tech/postgresql-deployment-automated.git
 
 # Navigate to the project directory
-cd your-repo-name
+cd postgresql-deployment-automated/terraform_files
 
 #Deploy to azure portal
 az login
