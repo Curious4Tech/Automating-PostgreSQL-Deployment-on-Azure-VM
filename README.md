@@ -128,6 +128,7 @@ git clone https://github.com/Curious4Tech/your-repo-name.git
 cd your-repo-name
 
 #Deploy to azure portal
+az login
 terraform init
 terraform validate
 terraform plan
