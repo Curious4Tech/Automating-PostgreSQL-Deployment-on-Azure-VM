@@ -126,6 +126,7 @@ git clone https://github.com/Curious4Tech/your-repo-name.git
 
 # Navigate to the project directory
 cd your-repo-name
+
 #Deploy to azure portal
 terraform init
 terraform plan
