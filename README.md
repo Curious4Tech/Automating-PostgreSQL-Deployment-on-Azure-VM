@@ -1,6 +1,7 @@
 # Automating PostgreSQL Deployment on Azure: A Terraform Journey
 
-![image](https://github.com/user-attachments/assets/90969d6f-60d3-4331-b9e1-39b0c066a3a6)
+                            ![image](https://github.com/user-attachments/assets/6754bb9d-4d50-4989-9af8-26f949b6d90c)
+
 
 
 ## Introduction
