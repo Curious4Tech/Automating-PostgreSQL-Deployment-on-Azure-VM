@@ -35,7 +35,7 @@ The infrastructure consists of several key components:
    - Public IP for remote access
 
 2. **Compute Layer**
-   - Ubuntu 18.04 LTS Virtual Machine
+   - Ubuntu 20.04 LTS Virtual Machine
    - Password-based authentication
    - Automated PostgreSQL installation and configuration
 
