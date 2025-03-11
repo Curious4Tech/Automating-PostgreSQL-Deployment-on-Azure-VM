@@ -72,7 +72,7 @@ security_rule {
     protocol                   = "Tcp"
     source_port_range         = "*"
     destination_port_range     = "5432"
-    source_address_prefix      = "*"
+    source_address_prefix      = "*"   # In production, restrict this to your IP
     destination_address_prefix = "*"
 }
 ```
@@ -121,6 +121,12 @@ EOF
 Deploying the infrastructure is straightforward:
 
 ```bash
+# Clone the repository
+git clone https://github.com/Curious4Tech/your-repo-name.git
+
+# Navigate to the project directory
+cd your-repo-name
+#Deploy to azure portal
 terraform init
 terraform plan
 terraform apply
