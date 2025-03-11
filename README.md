@@ -89,13 +89,26 @@ The VM configuration includes a custom data script that automatically:
 
 ```bash
 custom_data = base64encode(<<-EOF
-    #!/bin/bash
-    sudo apt-get update
-    sudo apt-get install -y postgresql postgresql-contrib
-    # Configure PostgreSQL for remote access
-    sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" \
-        /etc/postgresql/10/main/postgresql.conf
-EOF
+              #!/bin/bash
+              # Update package list and upgrade system
+              sudo apt-get update
+              sudo apt-get upgrade -y
+
+              # Install PostgreSQL (this will install the latest version from Ubuntu repositories)
+              sudo apt-get install -y postgresql postgresql-contrib
+
+              # Get installed PostgreSQL version
+              PG_VERSION=$(ls /etc/postgresql/)
+
+              # Configure PostgreSQL to accept connections from any address
+              sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" /etc/postgresql/$PG_VERSION/main/postgresql.conf
+              
+              # Add entry to allow remote connections in pg_hba.conf
+              echo "host    all             all             0.0.0.0/0               scram-sha-256" | sudo tee -a /etc/postgresql/$PG_VERSION/main/pg_hba.conf
+
+              # Restart PostgreSQL
+              sudo systemctl restart postgresql
+              EOF
 )
 ```
 
