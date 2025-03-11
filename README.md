@@ -1,0 +1,1 @@
+# Automating-PostgreSQL-Deployment-on-Azure-VM
