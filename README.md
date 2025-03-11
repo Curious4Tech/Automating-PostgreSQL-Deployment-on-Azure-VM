@@ -1,6 +1,7 @@
 # Automating PostgreSQL Deployment on Azure: A Terraform Journey
 
-![Header Image Placeholder - Azure and Terraform logos with PostgreSQL elephant]
+![image](https://github.com/user-attachments/assets/90969d6f-60d3-4331-b9e1-39b0c066a3a6)
+
 
 ## Introduction
 
